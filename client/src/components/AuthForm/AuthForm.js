@@ -19,6 +19,7 @@ const AuthForm = () => {
     const [isSignup, setIsSignup] = useState(false)
     const dispatch = useDispatch();
     const history = useHistory();
+    const [Message, setMessage] = useState(null)
 
 
     const handleChange = (e) =>{
@@ -31,7 +32,12 @@ const AuthForm = () => {
             e.preventDefault();
             console.log(userData);
             if(isSignup){
+                if(userData.password===userData.confirmPassword){
                 dispatch(signup(userData, history))
+                }
+                else{
+                    setMessage("Confirm Password must be same as Password")
+                }
                 // console.log(userData);
             
             }
@@ -51,6 +57,7 @@ const AuthForm = () => {
         <div className="Box">
         <div className="paper">
             <h3>{isSignup?"Sign Up":"Login"}</h3>
+            <p>{Message}</p>
             <form onSubmit={handleSubmit}>
             {isSignup && (
                 <Input label="NAME" name="name" type="text" placeholder="Enter your Name"  handleChange={handleChange} />

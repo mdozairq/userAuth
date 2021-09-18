@@ -7,7 +7,7 @@ function App() {
   return (
     <BrowserRouter>
     <div className="App">
-      <h1>Internship Assignment</h1>
+      <h1>User Authorization</h1>
       <Switch>
       <Route path="/" exact component={AuthForm} />
       <Route path="/profile" exact component={Profile} />
