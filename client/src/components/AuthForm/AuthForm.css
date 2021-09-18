@@ -1,0 +1,42 @@
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.Box {
+    width: 100%;
+    padding: 0px 120px;
+    display: block;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    margin-top: 40px;
+}
+.paper{
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 190px;
+    padding-left: 190px;
+}
+button{
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-family: "Dosis", sans-serif;
+    cursor: pointer;
+    margin-bottom: 2rem !important;
+    color: #ffffff;
+    background-color: #02ad88;
+    border-color: #02ad88;
+}
+
+.btn{
+    width: auto;
+    height: 40px;
+}
