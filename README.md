@@ -1,8 +1,6 @@
 # userAuth
-# Learning MERN Stack
+# MERN Stack
 
-
-## Notes
 
 - **M** = MongoDB (We'll use Mongoose to make it easier for Node.js to work with MongoDB, and we'll use MongoDB Atlas = MongoDB database, but cloud).
 - **E** = Express (makes it easier to work with Node.js. We'll use `cors` middleware to access other servers outside our server).
@@ -136,7 +134,7 @@ nodemon -x 'npm run lint; node server.js' # inside /backend
 <details>
 <summary><span style="font-size:x-large">React</span></summary>
 
-After `npx create-react-app mern-exercise-tracker` was run, you have the folders `/public` and `/src`:
+After `npx create-react-app userAuth` was run, you have the folders `/public` and `/src`:
 
 - **`/public/index.html`** is the page. The auto-generated line `<div id="root"></div>` is where React will attach the React app.
 - **`/src/index.js`** is the main JavaScript file. The auto-generated line `import App from './App';` is where it imports the React app, and `ReactDOM.render(<App />, document.getElementById('root'));` is where it actually tries to attach the React app to the `div` with `id="root"` in `/public/index.html`.
@@ -256,7 +254,7 @@ Then in JS:
 import axios from 'axios';
 ...
 // add an exercise to backend!
-const backendEndpoint = 'http://localhost:5000/exercises/add';
+const backendEndpoint = 'http://localhost:5000/user';
 axios.post(backendEndpoint, exercise) // exercise is in the JSON format expected
   .then((res) => console.log(res.data));
 ```
@@ -264,7 +262,7 @@ axios.post(backendEndpoint, exercise) // exercise is in the JSON format expected
 and:
 
 ```js
-const backendEndpoint = 'http://localhost:5000/users';
+const backendEndpoint = 'http://localhost:5000/user';
 axios.get(backendEndpoint) // get list of users from backend!
   .then((res) => {
     if (res.data.length > 0) {
